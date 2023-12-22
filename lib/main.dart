@@ -1,35 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_authorize_app/features/auth/presentation/screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AutorizaApp',
+      debugShowCheckedModeBanner: false,
+      title: 'SwayApp',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
+        textTheme: TextTheme(
+          displayLarge: const TextStyle(
+            fontSize: 72,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
-      home: MyHomePage(),
+      home: LoginScreen(),
     );
   }
 }
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Text('Este es un mensaje de prueba.'),
-        ],
-      ),
-    );
-  }
-}
-

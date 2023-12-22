@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xml:space="preserve" width="127.205" height="147.19" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 12720.48 14718.96">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil3 {fill:#00AFEF}
+    .fil0 {fill:#695DC5}
+    .fil1 {fill:#D2D3D5}
+    .fil4 {fill:#FD4F00}
+    .fil2 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2182113266224">
+   <polygon class="fil0" points="29.76,10969.02 6353.54,14725.49 12677.36,10969.19 6353.51,7350.17 "/>
+   <polygon class="fil1" points="1576.69,2740.12 1580.18,10083.28 6353.48,7350.21 6353.27,5444.88 3175.3,7328.02 3153.88,1841.09 "/>
+   <polygon class="fil2" points="6358.59,5449.74 6359.59,7349.69 11125.81,10083.08 11130.33,2740.14 9551.83,1841.08 9530.2,7329.97 "/>
+   <polygon class="fil3" points="6353.28,5444.9 6358.59,5449.74 9530.2,7329.97 9551.83,1841.08 6353.59,6.53 "/>
+   <path class="fil4" d="M3153.89 1841.08l21.43 5486.95 3177.96 -1883.13 0.3 -5438.37 -0.02 0 -799.29 458.18c-288.41,170.6 -602.91,344.77 -895.89,513.45l-502.02 287.69c-260.39,145.56 -545.67,318.93 -799.74,457.72l-202.73 117.51z"/>
+   <polygon class="fil3" points="11125.81,10083.08 12677.35,10969.2 12713.8,3645.26 11130.33,2740.14 "/>
+   <path class="fil4" d="M29.75 10969l1550.43 -885.72 -3.48 -7343.14c-16.25,14.04 -23.8,15.04 -43.89,26.88 -273.89,161.35 -578.34,323.68 -842.08,482.22l-697.43 396.02c0,612.81 6.08,1216.9 6.08,1834.56 0,80.93 6.12,142.25 6.07,218.69 -0.68,1149.76 12.15,2296.39 12.15,3444.35l12.15 1826.14z"/>
+  </g>
+ </g>
+</svg>
