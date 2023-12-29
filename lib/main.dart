@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_authorize_app/features/auth/presentation/screens/login_screen.dart';
+import 'package:flutter_sway_app/config/theme/app_theme.dart';
+import 'package:flutter_sway_app/features/home/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,17 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SwayApp',
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
-        textTheme: TextTheme(
-          displayLarge: const TextStyle(
-            fontSize: 72,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-      home: LoginScreen(),
+      theme: AppTheme.appTheme(),
+      home: HomeScreen(),
     );
   }
 }

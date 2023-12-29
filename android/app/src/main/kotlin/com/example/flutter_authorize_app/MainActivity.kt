@@ -1,4 +1,4 @@
-package com.example.flutter_authorize_app
+package com.example.flutter_sway_app
 
 import io.flutter.embedding.android.FlutterActivity
 

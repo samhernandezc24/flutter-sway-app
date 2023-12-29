@@ -1,41 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sway_app/core/constants/constants.dart';
 
-class AuthFieldInput extends StatelessWidget {
+class AuthInputField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
-  final bool isPassword;
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
 
-  const AuthFieldInput({
+  const AuthInputField({
     Key? key,
     required this.controller,
     required this.hintText,
     required this.textInputAction,
-    this.isPassword = false,
     this.keyboardType = TextInputType.text,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final inputBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.all(
-        Radius.circular(10),
-      ),
-    );
-
     return TextFormField(
       controller: controller,
       decoration: InputDecoration(
-        enabledBorder: inputBorder,
-        focusedBorder: inputBorder,
-        //focusedBorder: inputBorder,
+        enabledBorder: UIConstants.defaultInputBorder,
+        focusedBorder: UIConstants.defaultInputBorder,
+        hintStyle: const TextStyle(fontSize: 18),
         hintText: hintText,
-        hintStyle: const TextStyle(
-          fontSize: 18,
-        ),
       ),
-      obscureText: isPassword,
       keyboardType: keyboardType,
       textInputAction: textInputAction,
     );

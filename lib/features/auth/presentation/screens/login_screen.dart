@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_authorize_app/features/auth/presentation/widgets/auth_field_input.dart';
+import 'package:flutter_sway_app/core/constants/constants.dart';
+import 'package:flutter_sway_app/features/auth/presentation/widgets/auth_input_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -12,6 +12,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   late final TextEditingController _emailController;
   late final TextEditingController _passwordController;
+
+  bool _isPasswordVisible = true;
 
   @override
   void initState() {
@@ -30,7 +32,14 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: AppColors.backgroundColor,
+        title: Image.asset(
+          'assets/images/logo/logo.png',
+          height: 50,
+        ),
+        centerTitle: true,
+      ),
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 32),
@@ -39,48 +48,40 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Flexible(flex: 2, child: Container()),
-              Image.asset(
-                'assets/images/logo/logo.png',
-                height: 64,
-              ),
               const SizedBox(height: 64),
-              AuthFieldInput(
+              // Campo: Usuario / Correo Electrónico
+              AuthInputField(
                 controller: _emailController,
                 hintText: 'Usuario',
                 keyboardType: TextInputType.emailAddress,
                 textInputAction: TextInputAction.next,
               ),
               const SizedBox(height: 24),
-              AuthFieldInput(
+              // Campo: Contraseña
+              TextFormField(
                 controller: _passwordController,
-                hintText: 'Contraseña',
+                decoration: InputDecoration(
+                    enabledBorder: UIConstants.defaultInputBorder,
+                    focusedBorder: UIConstants.defaultInputBorder,
+                    hintStyle: const TextStyle(fontSize: 18),
+                    hintText: 'Contraseña',
+                    suffixIcon: IconButton(
+                      icon: Icon(_isPasswordVisible
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                      onPressed: () {
+                        setState(() {
+                          _isPasswordVisible = !_isPasswordVisible;
+                        });
+                      },
+                    )),
                 keyboardType: TextInputType.visiblePassword,
+                obscureText: _isPasswordVisible,
                 textInputAction: TextInputAction.done,
-                isPassword: true,
               ),
               const SizedBox(height: 24),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  height: 50,
-                  width: double.infinity,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Colors.blueGrey,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  child: const Text(
-                    'Ingresar',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-              ),
+              // Login Button
+              _buildLoginButton(),
               const SizedBox(height: 12),
               Flexible(flex: 2, child: Container()),
               Row(
@@ -102,6 +103,31 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 20),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildLoginButton() {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        height: 50,
+        width: double.infinity,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.blueGrey,
+          borderRadius: BorderRadius.all(
+            Radius.circular(10),
+          ),
+        ),
+        child: const Text(
+          'Ingresar',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ),

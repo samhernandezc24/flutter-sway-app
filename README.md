@@ -1,16 +1,48 @@
-# flutter_authorize_app
+<h1 align="center">SWAY</h1>
+<h5 align="center">(Simplified Workflow for Approving Your Documents)</h5>
 
-A new Flutter project.
+<div align="center">
+  <img alt="Logo de Sway">
+</div>
 
-## Getting Started
+<h4 align="center">
+  Aplicación Móvil de Autorizaciones: Fácil & Eficiente.
+</h4>
 
-This project is a starting point for a Flutter application.
+## Showcase
 
-A few resources to get you started if this is your first Flutter project:
+<div style="text-align: center">
+  <table>
+    <tr>
+      <td style="text-align: center">
+        <img src="" width="250" />
+      </td>
+      <td style="text-align: center">
+        <img src="" width="250" />
+      </td>
+      <td style="text-align: center">
+        <img src="" width="250" />
+      </td>
+      <td style="text-align: center">
+        <img src="" width="250" />
+      </td>
+    </tr>
+  </table>
+</div>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<div align="center">
+  <a href='https://play.google.com/store/apps'>
+    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_gb/badges/images/generic/en_badge_web_generic.png' width="300">
+  </a>
+</div>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Desarrollo
+Este proyecto utiliza el patrón BLoC (Business Logic Component) para gestionar el estado de la aplicación. BLoC funciona excepcionalmente bien con la naturaleza reactiva de Flutter.
+
+Dependencias:
+
+#### Impulsado Por
+
+<div align="center">
+  <img src=="" alt="Powered by Workcube">
+</div>
