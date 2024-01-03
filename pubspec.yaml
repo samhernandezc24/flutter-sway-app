@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # animations inspired in Animate.css
+  animate_do: ^3.1.2
+
   # icons
   cupertino_icons: ^1.0.2
 
@@ -37,4 +40,5 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/images/
     - assets/images/logo/

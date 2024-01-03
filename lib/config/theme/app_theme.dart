@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   static ThemeData appTheme() {
     return ThemeData(
-      scaffoldBackgroundColor: AppColors.backgroundColor,
+      scaffoldBackgroundColor: Colors.white,
       appBarTheme: appBarTheme(),
       floatingActionButtonTheme: floatingActionButtonTheme(),
       textTheme: GoogleFonts.latoTextTheme(),
@@ -28,7 +28,7 @@ class AppTheme {
   // FloatingActionButton Theme
   static FloatingActionButtonThemeData floatingActionButtonTheme() {
     return const FloatingActionButtonThemeData(
-      backgroundColor: AppColors.accentColor,
+      backgroundColor: AppColors.secondaryButtonColor,
     );
   }
 }
